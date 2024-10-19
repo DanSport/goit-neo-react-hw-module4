@@ -1,0 +1,54 @@
+/* src/components/ImageModal/ImageModal.module.css */
+
+.overlay {
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    /* Відступ для того, щоб зображення та контент не впиралися в краї екрану */
+}
+
+.modal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    width: auto;
+    max-height: 90vh;
+    /* Обмеження висоти, щоб не виходити за межі екрану */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    /* Запобігаємо виходу контенту за межі модального вікна */
+    display: flex;
+    flex-direction: column;
+    /* Зробимо розміщення контенту вертикальним */
+    align-items: center;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 60vh;
+    /* Обмежуємо висоту зображення, щоб залишити місце для тексту */
+    object-fit: contain;
+    /* Забезпечуємо збереження пропорцій зображення */
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.textContent {
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    overflow: auto;
+    /* У випадку дуже довгого тексту додаємо прокрутку */
+}
+
+.textContent p {
+    margin: 5px 0;
+}
