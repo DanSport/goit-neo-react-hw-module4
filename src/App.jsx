@@ -5,7 +5,7 @@ import LoadMoreBtn from "./components/LoadMoreBtn/LoadMoreBtn";
 import Loader from "./components/Loader/Loader";
 import ErrorMessage from "./components/ErrorMessage/ErrorMessage";
 import ImageModal from "./components/ImageModal/ImageModal";
-import { Toaster } from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import { fetchImages } from "./services/api";
 import "./App.css";
 
@@ -44,7 +44,7 @@ const App = () => {
 
   const handleSearch = (searchQuery) => {
     if (searchQuery.trim() === "") {
-      Toaster.error("Please enter a search term");
+      toast.error("Please enter a search term");
       return;
     }
     setQuery(searchQuery);
